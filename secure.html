@@ -1,0 +1,35 @@
+    <title>SECURE - Yi Shuan</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div style="margin:100px;">
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <a class="navbar-brand" href="/">SECURE - Yi Shuan</a>
+                </div>
+            </nav>
+            <div class="jumbotron"  style="padding:20px;">
+                <h1>--SECURE--</h1>
+                <p>You've reached a secure page - your IP is whitelisted!</p>
+                <p><a class="btn btn-primary btn-lg" href="/" role="button">Go back to main</a></p>
+                    <meta name="google-signin-scope" content="profile email">
+                    <meta name="google-signin-client_id" content="502982040774-c1phm1233nqafd0nn7c1d0gc9rl48heg.apps.googleusercontent.com">
+                    <script src="https://apis.google.com/js/platform.js" async defer></script>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                    <script>
+                        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+        }
