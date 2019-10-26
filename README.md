@@ -3,6 +3,7 @@ Integrated Google sign-in in an express server, with IP whitelisting for secure 
 
 Whitelisted IPs can be added into the const ips field in app.js, in an array form 
 `const ips = ['110.231.233.12','65.123.15.12','123.232.12.54']`
+Note: localhost:3000 'ip address' is '::1'
 
 After whitelisting your IP you'll be able to access the /securePath, which is /secure.html, otherwise you'll keep seeing the main page.
 
